@@ -510,6 +510,11 @@
             }
         }
 
+        /* Скрыть кнопку 'К содержанию' на десктопе */
+        .scroll-to-toc {
+            display: none;
+        }
+
         /* Tablet (481px - 768px) */
         @media screen and (max-width: 768px) {
             :root {
@@ -641,6 +646,33 @@
             .toc-item {
                 padding: var(--space-sm) 0;
                 font-size: var(--font-size-sm);
+            }
+
+            /* Плавающая кнопка 'К содержанию' */
+            .scroll-to-toc {
+                display: block;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: var(--color-primary);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                z-index: 1000;
+                font-size: 20px;
+                line-height: 50px;
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .scroll-to-toc:hover {
+                background-color: #2c5f8d;
+                transform: scale(1.05);
             }
         }
 
@@ -1873,6 +1905,10 @@
             });
         });
     </script>
+
+
+    <!-- Плавающая кнопка 'К содержанию' (только для мобильных) -->
+    <a href="#top" class="scroll-to-toc" title="К содержанию">▲</a>
 
 </body>
 
