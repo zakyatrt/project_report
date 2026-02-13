@@ -725,11 +725,14 @@
             /* Tables on mobile */
             .table-wrapper {
                 margin: var(--space-md) calc(-1 * var(--space-md));
-                padding: 0 var(--space-sm);
+                padding: 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             table {
                 font-size: 11px;
+                min-width: 400px;
             }
 
             th,
@@ -741,10 +744,6 @@
                 white-space: normal;
                 word-break: break-word;
                 font-size: 10px;
-            }
-
-            td {
-                word-break: break-word;
             }
 
             .docs-list ol,
